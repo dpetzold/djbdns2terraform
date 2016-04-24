@@ -1,0 +1,10 @@
+terraform
+.env
+djbdns2terraform/__pycache__/
+data
+*.pyc
+djbdns2terraform.egg-info/
+*.egg
+dist/
+.eggs
+.cache
