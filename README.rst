@@ -76,6 +76,8 @@ Usage
 ::
 
   python3 -m djbdns2terraform data
+  cd terraform
+  terraform apply
 
 
 Run Tests
