@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import argparse
+import os
+
 from collections import defaultdict
 
 from .models import (
@@ -108,6 +110,9 @@ def main():
     args = parser.parse_args()
 
     records = parse_data_file(args.config)
+
+    if not os.path.exists('terraform'):
+        os.mkdir('terraform')
 
     for hosted_zone, zone_records in records.items():
         zone_name = hosted_zone.replace('.', '-')
